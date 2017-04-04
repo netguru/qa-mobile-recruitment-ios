@@ -1,0 +1,17 @@
+//
+//  Tests-Common.xcconfig
+//  UITestWorkshops
+
+#include "Base-Common.xcconfig"
+
+_ENVIRONMENT = ENV_TESTS
+
+_PRODUCT_NAME = UITestWorkshops
+
+_INFOPLIST =  $(SRCROOT)/Supporting Files/UITestWorkshopsUITests/UITests-Info.plist
+
+//TEST_HOST = $(BUILT_PRODUCTS_DIR)/UITestWorkshops.app/UITestWorkshops
+//BUNDLE_LOADER = $(TEST_HOST)
+
+//_CODE_SIGN_IDENTITY = iPhone Developer
+_CODE_SIGN_DEVELOPMENT_TEAM =

@@ -1,0 +1,15 @@
+//
+//  Staging.xcconfig
+//  UITestWorkshops
+//
+
+#include "../Carthage/Checkouts/xcconfigs/Base/Configurations/Release.xcconfig"
+#include "Common.xcconfig"
+
+_ENVIRONMENT = ENV_STAGING
+_BUNDLE_IDENTIFIER = co.netguru.UITestWorkshops.staging
+
+_PRODUCT_NAME = UITestWorkshops
+
+_CODE_SIGN_IDENTITY = iPhone Distribution: netguru sp. z o. o.
+_PROVISIONING_PROFILE_SPECIFIER = UITestWorkshops Staging

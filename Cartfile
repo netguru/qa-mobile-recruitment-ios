@@ -1,0 +1,9 @@
+#
+# Cartfile
+#
+# Copyright (c) Netguru sp. z.o.o
+#
+
+github "jspahrsummers/xcconfigs" "master"
+github "PureLayout/PureLayout" ~> 3.0
+github "realm/realm-cocoa" ~> 2.4

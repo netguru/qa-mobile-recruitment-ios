@@ -1,0 +1,12 @@
+//
+//  Release.xcconfig
+//  UITestWorkshops
+//
+
+#include "../Carthage/Checkouts/xcconfigs/Base/Configurations/Release.xcconfig"
+#include "Common.xcconfig"
+
+_ENVIRONMENT = ENV_RELEASE
+_BUNDLE_IDENTIFIER = co.netguru.UITestWorkshops.release
+
+_PRODUCT_NAME = UITestWorkshops

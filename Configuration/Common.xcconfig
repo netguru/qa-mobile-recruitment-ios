@@ -1,0 +1,13 @@
+//
+//  Common.xcconfig
+//  UITestWorkshops
+//
+
+#include "../Carthage/Checkouts/xcconfigs/iOS/iOS-Application.xcconfig"
+#include "Base-Common.xcconfig"
+
+_PRODUCT_NAME = UITestWorkshops
+
+_INFOPLIST = $(SRCROOT)/Supporting Files/UITestWorkshops/UITestWorkshops-Info.plist
+
+_OTHER_LDFLAGS = -ObjC -framework "PureLayout"

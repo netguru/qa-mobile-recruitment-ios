@@ -1,0 +1,145 @@
+/********* Common *********/
+
+/* Error */
+"Error" = "Błąd";
+
+/* Ok */
+"Ok" = "Ok";
+
+/* Cancel */
+"Cancel" = "Anuluj";
+
+/* Setting */
+"Settings" = "Ustawienia";
+
+/* Done */
+"Done" = "Gotowe";
+
+/* Male */
+"Male" = "Mężczyzna";
+
+/* Female */
+"Female" = "Kobieta";
+
+/********* LoginController *********/
+
+/* Login title */
+"LoginView.title" = "Logowanie";
+
+/* Login */
+"LoginView.email.placeholder" = "Email";
+
+/* Login button title */
+"LoginView.loginButton.title" = "Zaloguj";
+
+/* Password */
+"LoginView.password.placeholder" = "Hasło";
+
+/* Wrong login message */
+"LoginView.email.wrong" = "Niepoprawne email";
+
+/* Wrong password message */
+"LoginView.password.wrong" = "Niepoprawne hasło";
+
+/* Register */
+"LoginView.register.placeholder" = "Rejestracja";
+
+/********* OnBoarding *********/
+
+/* Finish button title */
+"OnBoardingView.finishButton" = "kontynuj";
+
+/********* Items List *********/
+
+/* List title */
+"List.title" = "Przedmioty";
+
+/* New item alert title */
+"List.newItem.title" = "Dodaj nowy przedmiot";
+
+/* New item alert message */
+"List.newItem.message" = "Wpisz nazwę przedmiotu";
+
+/* New item alert message */
+"List.newItem.error.message" = "Przedmiot powinien mieć nazwę";
+
+/********* Register *********/
+
+/* Register title */
+"RegisterView.title" = "Rejestracja";
+
+/* Login as email */
+"RegisterView.email.placeholder" = "Użyj email jako loginu";
+
+/* Password */
+"RegisterView.password.placeholder" = "Hasło";
+
+/* Retype Password */
+"RegisterView.password.retype.placeholder" = "Wpisz hasło ponownie";
+
+/* Firstname */
+"RegisterView.firstname.placeholder" = "Imię";
+
+/* Lastname */
+"RegisterView.lastname.placeholder" = "Nazwisko";
+
+/* Birthdate */
+"RegisterView.birthdate.placeholder" = "Wybierz datę urodzenia";
+
+/* Country */
+"RegisterView.country.placeholder" = "Wybierz kraj";
+
+/* Wrong login message */
+"RegisterView.email.wrong" = "Login nie jest poprawym adresem email";
+
+/* Wrong password message */
+"RegisterView.password.wrong" = "Niepoprawne hasło, nie zawiera przynajmniej 8 znaków, małe i dużej litery, cyfry i znaku specjalnego";
+
+/* Wrong firstname message */
+"RegisterView.firstname.wrong" = "Imię jest puste lub nie zawiera tylko liter";
+
+/* Wrong lastname message */
+"RegisterView.lastname.wrong" = "Nazwisko jest puste lub nie zawiera tylko liter";
+
+/* Wrong birthdate messaeg */
+"RegisterView.birthdate.wrong" = "Data urodzenia jest pusta lub ma niewłaściwy format";
+
+/* Wrong country message */
+"RegisterView.country.wrong" = "Kraj jest pusty lub ma niewłaściwy format";
+
+/* Password mismatch message */
+"RegisterView.password.mismatch" = "Hasła nie pasują do siebie";
+
+/* User already exists */
+"RegisterView.user.exists" = "Taki użytkownik już istnieje";
+
+/* User do not exists */
+"RegisterView.user.donotexists" = "Taki użytkownik nie istnieje";
+
+/********* Profile *********/
+
+/* Profile title */
+"Profile.title" = "Profil";
+
+/* Logout */
+"Profile.logout" = "Wyloguj";
+
+/* Proile edit */
+"Profile.edit" = "Edytuj";
+
+/* Proile save */
+"Profile.save" = "Zapisz";
+
+/********* Avatar *********/
+
+/* Camera title */
+"Avatar.camera.title" = "Aparat";
+
+/* Camera message */
+"Avatar.camera.access" = "Aparat jest niedostępny, możesz to zmienić w ustawieniach.";
+
+/* Photo library title */
+"Avatar.library.title" = "Biblioteka zdjęć";
+
+/* Photo library message */
+"Avatar.library.access" = "Biblioteka zdjęć jest niedostępna, możesz to zmienić w ustawieniach";

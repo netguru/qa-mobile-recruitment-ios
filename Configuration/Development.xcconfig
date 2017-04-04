@@ -1,0 +1,12 @@
+//
+//  Development.xcconfig
+//  UITestWorkshops
+//
+
+#include "../Carthage/Checkouts/xcconfigs/Base/Configurations/Debug.xcconfig"
+#include "Common.xcconfig"
+
+_ENVIRONMENT = ENV_DEVELOPMENT
+_BUNDLE_IDENTIFIER = co.netguru.UITestWorkshops.development
+
+_PRODUCT_NAME = UITestWorkshops

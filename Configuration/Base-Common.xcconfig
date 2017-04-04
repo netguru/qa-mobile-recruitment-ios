@@ -1,0 +1,47 @@
+//
+//  Base.xcconfig
+//  UITestWorkshops
+//
+
+// Version settings
+
+_ENVIRONMENT =
+
+// Version settings
+
+_VERSION = 1.0
+_BUILD = 0
+
+// Product settings
+
+_PRODUCT_NAME =
+_BUNDLE_IDENTIFIER =
+_INFOPLIST =
+
+// Deployment settings
+
+_DEVICE_FAMILY = 1
+_DEPLOYMENT_TARGET = 9.0
+
+// Code signing settings
+
+_DEVELOPMENT_TEAM =
+_CODE_SIGN_IDENTITY =
+_PROVISIONING_PROFILE_SPECIFIER =
+
+// Compiler settings
+
+_CLANG_DEFINITIONS =
+_SWIFT_FLAGS =
+
+_ASSET_ICON =
+_ASSET_LAUNCHIMAGE =
+
+// Linker settings
+
+_CARTHAGE_BUILD_PATH = $(SRCROOT)/Carthage/Build/iOS
+_FRAMEWORK_SEARCH_PATHS = $(_CARTHAGE_BUILD_PATH)
+
+// Map above settings
+
+#include "Base-Mappings.xcconfig"

@@ -1,0 +1,10 @@
+//
+//  Tests-Development.xcconfig
+//  UITestWorkshops
+//
+
+#include "../Carthage/Checkouts/xcconfigs/Base/Configurations/Test.xcconfig"
+#include "../Carthage/Checkouts/xcconfigs/iOS/iOS-Application.xcconfig"
+#include "Tests-Common.xcconfig"
+
+_BUNDLE_IDENTIFIER = co.netguru.UITestWorkshops.test

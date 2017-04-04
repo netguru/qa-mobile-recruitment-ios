@@ -1,0 +1,152 @@
+#
+# bitrise.yml
+#
+# Copyright (c) 2016 Netguru Sp. z o.o. All rights reserved.
+#
+
+# CLI metadata
+
+format_version: 1.3.0
+default_step_lib_source: https://github.com/bitrise-io/bitrise-steplib.git
+
+# Environment configuration
+
+app:
+  envs:
+  - BITRISE_SCHEME_DEVELOPMENT: Development
+  - BITRISE_SCHEME_STAGING: Staging
+  - BITRISE_PROJECT_PATH: "./UITestWorkshops.xcodeproj"
+    opts:
+      is_expand: false
+  - BITRISE_SCHEME: UITestWorkshops
+    opts:
+      is_expand: false
+  - BITRISE_INFO_PLIST_PATH: Supporting Files/UITestWorkshops/UITestWorkshops-Info.plist
+    opts:
+      is_expand: true
+
+
+# Workflow trigger map
+
+trigger_map:
+- push_branch: develop
+  workflow: develop
+
+- pull_request_target_branch: develop
+  workflow: pull-requests
+
+- pull_request_target_branch: master
+  workflow: master
+
+# Workflow declarations
+
+workflows:
+
+  # The default workflow
+
+  master:
+    before_run:
+        - cache-pull
+        - bootstrap
+    after_run:
+        - test
+        - archive-and-deploy-staging
+        - save-cache
+        - deploy-artifacts
+
+  # The pull-requests workflow
+
+  pull-requests:
+    before_run:
+        - cache-pull
+        - bootstrap
+    after_run:
+        - test
+        - save-cache
+        - deploy-artifacts
+
+  # The development workflow
+
+  develop:
+    before_run:
+        - cache-pull
+        - bootstrap
+    after_run:
+        - test
+        - save-cache
+        - archive-and-deploy-staging
+        - deploy-artifacts
+
+  # The development workflow
+
+  #
+  # Reusable Workflows
+  #
+
+  # Test
+
+  test:
+    steps:
+    - xcode-test@1.18.1:
+        title: 'Xcode: Unit Test'
+        inputs:
+        - is_clean_build: 'yes'
+        - scheme: $BITRISE_SCHEME_DEVELOPMENT
+        - output_tool: xcpretty
+
+  # Archive and Deploy to staging
+
+  archive-and-deploy-staging:
+    steps:
+      - xcode-archive:
+          inputs:
+          - configuration: Staging
+          - is_clean_build: 'yes'
+          - scheme: $BITRISE_SCHEME_STAGING
+      - hockeyapp-deploy@2.3.0:
+          inputs:
+          - api_token: "$HOCKEY_APP_TOKEN_STAGING"
+          - app_id: "$HOCKEY_APP_ID_STAGING"
+
+  # Save cache
+
+  save-cache:
+    steps:
+      - cache-push:
+          inputs:
+            - cache_paths: |-
+                 ./Pods -> ./Podfile.lock
+                 ./Carthage -> ./Cartfile.resolved
+
+  # Deploy artifacts
+
+  deploy-artifacts:
+    steps:
+      - deploy-to-bitrise-io:
+          inputs:
+            - notify_user_groups: none
+
+  # Bootstrap
+
+  bootstrap:
+    steps:
+      - certificate-and-profile-installer: {}
+      - carthage:
+          inputs:
+            - carthage_command: bootstrap
+            - carthage_options: --platform iOS --no-use-binaries
+
+  # Cocoapods
+
+  pods:
+    steps:
+      - script:
+          inputs:
+          - content: bundle install
+      - cocoapods-install: {}
+
+  # Cache
+
+  cache-pull:
+    steps:
+      - cache-pull: {}
